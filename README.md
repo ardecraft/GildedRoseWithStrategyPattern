@@ -2,4 +2,4 @@
 
 Run tests: `gradle test`
 
-You can activate the legacy code in the GildedRose class and run the tests against it. Note that the logic tested by ConjuredUpdateStrategyTest is not implemented in the legacy GildedRose.updateQuality() method, as it's a new requirement. So, this test will fail with the legacy code.
+You can activate the legacy code in the GildedRose class and run the tests against it. Note that the logic tested by ConjuredUpdateStrategyTest is not implemented in the legacy GildedRose.updateQuality() method.
