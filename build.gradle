@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'eclipse'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.13.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.13.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.13.4'
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+group = 'com.gildedrose'
+version = '0.0.1-SNAPSHOT'
+
+test {
+    useJUnitPlatform();
+    finalizedBy jacocoTestReport; // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
+
+task texttest(type: JavaExec) {
+    mainClass = "com.gildedrose.TexttestFixture"
+    classpath = sourceSets.test.runtimeClasspath
+    args "30"
+}
