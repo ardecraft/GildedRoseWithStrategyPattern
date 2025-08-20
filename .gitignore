@@ -1,0 +1,31 @@
+# Eclipse project files
+/.project
+/.classpath
+/.settings/
+
+# Eclipse build output
+/bin/
+/target/
+
+# IntelliJ IDEA project files (in case someone uses both)
+/.idea/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Maven
+.mvn/
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
